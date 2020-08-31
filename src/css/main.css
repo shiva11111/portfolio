@@ -286,36 +286,42 @@ section {
   display: -ms-grid;
   display: grid;
   background: #1f9dd7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: -webkit-gradient(linear, left top, right top, from(#1f9dd7), to(#28599e));
   background: linear-gradient(90deg, #1f9dd7 0%, #28599e 100%);
 }
 
 .goodat-heading {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
+  margin-top: 7rem;
   font-size: 6rem;
   text-align: left;
 }
 
 .goodat-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(13rem, 23rem) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 23rem));
-  font-size: 5rem;
-  text-align: left;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .goodat-list img {
-  width: 35%;
-  height: 50%;
+  width: 15%;
+  height: 40%;
+}
+
+@media only screen and (max-width: 550px) {
+  .goodat-heading {
+    margin-top: 0rem;
+  }
+  .goodat-list img {
+    width: 18%;
+    height: 40%;
+  }
 }
 
 .projects {
