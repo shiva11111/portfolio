@@ -1,0 +1,111 @@
+.projects {
+  overflow-x: hidden;
+  &-heading {
+    margin-bottom: 2rem;
+  }
+  & .projects-list {
+    // display: flex;
+    position: relative;
+  }
+}
+
+.card-container {
+  display: flex;
+  & .card-image {
+    background-image: url("../images/infinity.png");
+    width: 65rem;
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+  }
+  & .card-body {
+    position: absolute;
+    background-color: #fd5e5e;
+    padding: 1rem;
+    width: 65rem;
+    height: 40rem;
+    font-size: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+    transition: all 0.5s;
+    & .heading {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    & .description {
+      margin-bottom: 1rem;
+    }
+    & button {
+      background-color: transparent;
+      border: solid black;
+      padding: 0.5rem 1rem;
+      border-radius: 6rem;
+      cursor: pointer;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+.scaledu {
+  animation: scaledu 0.5s;
+}
+
+@keyframes scaledu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .card-container {
+    & .card-image {
+      width: 45rem;
+      height: 30rem;
+    }
+    & .card-body {
+      width: 45rem;
+      height: 30rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    & .card-image {
+      width: 40rem;
+      height: 25rem;
+    }
+    & .card-body {
+      width: 40rem;
+      height: 25rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    & .card-image {
+      width: 30rem;
+      height: 20rem;
+    }
+    & .card-body {
+      width: 30rem;
+      height: 20rem;
+    }
+  }
+}

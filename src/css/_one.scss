@@ -1,0 +1,350 @@
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: rgb(251, 0, 34);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: rgb(4, 177, 76);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 20px;
+}
+
+.setfontsize {
+  font-size: 5rem;
+}
+
+.splash-button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: rgb(0, 189, 173);
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .setfontsize {
+    font-size: 3.5rem;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.75%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(100vh);
+  scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.container {
+  position: relative;
+}
+
+section {
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+@media only screen and (max-width: 700px) {
+  html,
+  body {
+    -ms-scroll-snap-type: unset;
+    scroll-snap-type: unset;
+    -ms-scroll-snap-points-y: unset;
+    scroll-snap-points-y: unset;
+    -ms-scroll-snap-type: unset;
+    scroll-snap-type: unset;
+  }
+  section {
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 550px) {
+  section {
+    height: 55vh;
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem;
+  left: 5%;
+  z-index: 2;
+}
+
+.navbar .menu {
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.navbar .burger-menu {
+  display: none;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar {
+    left: 0;
+    padding: 0.5rem;
+    width: 100%;
+    position: absolute;
+  }
+  .navbar .logo img {
+    width: 7rem;
+  }
+  .navbar .menu {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .navbar .menu {
+    font-size: 2.2rem;
+  }
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.about-1 {
+  font-size: 8rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 930px) {
+  .about-1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .about {
+    background-image: url("../images/image.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: right;
+  }
+  .about-1 {
+    font-size: 6rem;
+  }
+  .about-2 img {
+    display: none;
+  }
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #d33738;
+}
+
+.projects-heading {
+  font-size: 6rem;
+  text-align: left;
+}
+
+.projects-list {
+  font-size: 5rem;
+  text-align: left;
+}
+@media only screen and (max-width: 850px) {
+}
+.certifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #f99d30;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#f99d30),
+    to(#cc7003)
+  );
+  background: linear-gradient(90deg, #f99d30 0%, #cc7003 100%);
+}
+
+.certifications-heading {
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  text-align: left;
+}
+
+.certifications-list {
+  font-size: 5rem;
+  text-align: left;
+  position: relative;
+}
+
+.goodat {
+  display: -ms-grid;
+  display: grid;
+  background: #1f9dd7;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#1f9dd7),
+    to(#28599e)
+  );
+  background: linear-gradient(90deg, #1f9dd7 0%, #28599e 100%);
+}
+
+.goodat-heading {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  font-size: 6rem;
+  text-align: left;
+}
+
+.goodat-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(13rem, 23rem)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 23rem));
+  font-size: 5rem;
+  text-align: left;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.goodat-list img {
+  width: 35%;
+  height: 50%;
+}
+
+// @media only screen and (max-width: 800px) {
+//   .goodat {
+//     & .goodat-list {
+//       -ms-grid-columns: (minmax(10rem, 20rem)) [auto-fit];
+//       grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+//     }
+//   }
+//   // .goodat-list img {
+//   //   width: 25%;
+//   //   height: 50%;
+//   // }
+// }
+
+// @media only screen and (max-width: 630px) {
+//   .goodat {
+//     // height: 100vh;
+//     & .goodat-list {
+//       -ms-grid-columns: (minmax(5rem, 10rem)) [auto-fit];
+//       grid-template-columns: repeat(auto-fit, minmax(5rem, 10rem));
+//     }
+//   }
+// }
+// .goodat-list img {
+//   width: 20%;
+//   height: 40%;
+// }
+// }
