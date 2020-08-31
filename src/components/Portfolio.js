@@ -47,7 +47,7 @@ export default function Portfolio() {
   const [scaledu1, setScaledu1] = useState(true);
   const nextSlide1 = () => {
     setScaledu1(true);
-    if (activeIndex1 === CardData.length - 1) {
+    if (activeIndex1 === CertData.length - 1) {
       setState1({
         ...state1,
         activeIndex1: 0,
@@ -64,7 +64,7 @@ export default function Portfolio() {
     if (activeIndex1 === 0) {
       setState1({
         ...state1,
-        activeIndex1: CardData.length - 1,
+        activeIndex1: CertData.length - 1,
       });
     } else {
       setState1({
@@ -174,10 +174,10 @@ export default function Portfolio() {
             src={require("../images/Icon ionic-logo-javascript.png")}
             alt="js"
           />
-          <img
-            src={require("../images/Icon simple-mongodb.png")}
+          {/* <img
+            src={require("../images/icon-simple-mongodb.png")}
             alt="mongodb"
-          />
+          /> */}
           <img src={require("../images/Icon simple-adobexd.png")} alt="XD" />
         </div>
       </section>

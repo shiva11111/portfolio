@@ -1,21 +1,23 @@
 const CardData = [
   {
     name: "infinity",
-    head: "card one",
+    head: "Infinity2020.in",
     description:
-      "  card one description card one description card one description card one description",
+      "A website for technical fest at department of computer science,UCE,OU.",
+    url: "http://infinity2020.in/",
   },
   {
     name: "emcc",
-    head: "card two",
-    description:
-      "  card two description card two description card two description card two description",
+    head: "EMCC.IN",
+    description: "A website for music club at UCE,OU.",
+    url: "http://emcc.in/",
   },
   {
     name: "ancommune",
-    head: "card three",
+    head: "ANCOMMUNE.COM",
     description:
-      "  card three description card three description card three description card three description",
+      "Ancommune is a nonprofit entity which brings featured stories and interviews from the people and stalwarts of Andaman and Nicobar Islands.",
+    url: "http://ancommune.com/",
   },
 ];
 
